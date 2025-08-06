@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int balc = sc.nextInt();
+        int choice = sc.nextInt();
+        switch (choice) {
+            case 1:
+                int deposit = sc.nextInt();
+                balc += deposit;
+                System.out.println(balc);
+                break;
+            case 2:
+                int wd = sc.nextInt();
+                if (wd > balc) {
+                    System.out.println("Insufficient Balance");
+                } else {
+                    balc -= wd;
+                    System.out.println(balc);
+                }
+                break;
+            default:
+                System.out.println("Invalid Input");
+        }
+    }
+}
