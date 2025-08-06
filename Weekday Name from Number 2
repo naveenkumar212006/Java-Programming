@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Main {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int day = sc.nextInt();
+      String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+     if (day >= 1 && day <= 7) {
+     System.out.println(days[day - 1]);
+    } else {
+    System.out.println("Enter a valid Input");
+     }
+    }
+}
