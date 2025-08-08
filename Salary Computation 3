@@ -3,23 +3,22 @@ import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
-import java.util.Scanner;
 
-public class Main {
+public class Solution {
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int basic = sc.nextInt();
-        double hra, da;
-
-        if (basic < 15000) {
-            hra = 0.15 * basic;
-            da = 0.90 * basic;
-        } else {
-            hra = 5000;
-            da = 0.98 * basic;
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        double hra,da;
+        if(a<15000){
+            hra=(0.15*a);
+            da=(0.90*a); 
         }
-
-        double gross = basic + hra + da;
-        System.out.printf("%.2f", gross);
+        else{
+            hra=500;
+            da=(0.98*a);
+        }
+        double b= a+hra+da;
+        System.out.printf("%.2f",b);
     }
 }
