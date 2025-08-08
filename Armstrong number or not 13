@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        if(num<100||num>999){
+            System.out.println("No");
+            return;
+        }
+        int original = num;
+        int result = 0;
+        while (num>0){
+            int digit = num%10;
+            result += digit*digit*digit;
+            num/=10;
+        }
+        if(result==original){
+            System.out.println("Yes");   
+        }else{
+            System.out.println("No");
+        }
+    }
+}
+    
+
+
