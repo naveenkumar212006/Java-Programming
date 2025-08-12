@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long num = sc.nextLong();
+        if (num < 1 || num > 10000000) {
+            System.out.println("Enter a Valid Input");
+            return;
+        }
+        String s = String.valueOf(num);
+        System.out.println("The count of the given integer is: " + s.length());
+    }
+}
