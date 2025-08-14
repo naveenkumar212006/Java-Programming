@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        List<Integer> evenPos = new ArrayList<>();
+        List<Integer> oddPos = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            int val = sc.nextInt();
+            if (i % 2 == 0) evenPos.add(val);
+            else oddPos.add(val);
+        }
+        Collections.sort(evenPos);
+        Collections.sort(oddPos);
+        int secondLargestEven = evenPos.size() >= 2 ? evenPos.get(evenPos.size() - 2) : 0;
+        int secondSmallestOdd = oddPos.size() >= 2 ? oddPos.get(1) : 0;
+        System.out.println("Sum=" + (secondLargestEven + secondSmallestOdd));
+    }
+}
